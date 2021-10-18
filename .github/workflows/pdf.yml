@@ -4,13 +4,7 @@ on:
       - '/README.md'
       - '/docs/md/**'
   workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'     
-        required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags'  
+    inputs: ""
 
 name: CreatePDFs
 
