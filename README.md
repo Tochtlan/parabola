@@ -1,4 +1,4 @@
-#Parábola
+# Parábola
 
 Parábola es un videojuego chacarrero sobre piñatas.
 
