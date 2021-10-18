@@ -2,9 +2,7 @@ on:
   push:
     paths:
       - '/README.md'
-      - '/docs/**'
-    paths-ignore: 
-      - '/docs/out'
+      - '/docs/md/**'
 
 name: CreatePDFs
 
