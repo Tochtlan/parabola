@@ -1,0 +1,24 @@
+on:
+  push:
+    paths:
+      - '/README.md'
+      - '/docs/**'
+    paths-ignore: 
+      - '/docs/out'
+
+name: CreatePDFs
+
+jobs:
+  makepdfs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: mkrakowitzer/actions-makepdfs@master
+      if: github.ref == 'refs/heads/master'
+      with:
+        markdown_dir: /
+        output_dir: docs/out/
+    - uses: actions/upload-artifact@v1
+      with:
+        name: platform-architecture-docs
+        path: tmp
