@@ -1,7 +1,7 @@
 on:
   push:
     paths:
-      - '/docs/md/**'
+      - 'docs/md/**'
   workflow_dispatch:
     inputs:
       logLevel:
@@ -23,10 +23,10 @@ jobs:
         echo "Tags: ${{ github.event.inputs.tags }}" 
     - uses: actions/checkout@v1
     - uses: mkrakowitzer/actions-makepdfs@master
-      if: github.ref == 'refs/heads/master'
+      if: github.ref == 'refs/heads/main'
       with:
-        markdown_dir: docs/md
-        output_dir: docs/out
+        markdown_dir: docs/md/
+        output_dir: docs/out/
     - uses: actions/upload-artifact@v1
       with:
         name: docs
