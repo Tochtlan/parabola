@@ -4,7 +4,14 @@ on:
       - '/README.md'
       - '/docs/md/**'
   workflow_dispatch:
-    inputs: ""
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags'  
+      
 
 name: CreatePDFs
 
@@ -12,6 +19,9 @@ jobs:
   makepdfs:
     runs-on: ubuntu-latest
     steps:
+    - run: |
+        echo "Log level: ${{ github.event.inputs.logLevel }}"
+        echo "Tags: ${{ github.event.inputs.tags }}" 
     - uses: actions/checkout@v1
     - uses: mkrakowitzer/actions-makepdfs@master
       if: github.ref == 'refs/heads/master'
