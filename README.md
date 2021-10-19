@@ -1,4 +1,5 @@
 # Parábola
+[![CreatePDFs](https://github.com/Tochtlan/parabola/actions/workflows/pdf.yml/badge.svg)](https://github.com/Tochtlan/parabola/actions/workflows/pdf.yml)
 
 Parábola es un videojuego chacarrero sobre piñatas.
 
