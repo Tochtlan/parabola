@@ -26,9 +26,9 @@ jobs:
     - uses: mkrakowitzer/actions-makepdfs@master
       if: github.ref == 'refs/heads/master'
       with:
-        markdown_dir: /
-        output_dir: docs/out/
+        markdown_dir: docs/md
+        output_dir: docs/out
     - uses: actions/upload-artifact@v1
       with:
-        name: platform-architecture-docs
-        path: tmp
+        name: docs
+        path: docs/out
