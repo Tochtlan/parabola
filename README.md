@@ -1,6 +1,6 @@
-# Parábola
+# Piñata de barrio
 
-Parábola es un videojuego chocarrero sobre piñatas.
+Piñata de barrio es un videojuego chocarrero sobre piñatas.
 
 # Colaboración
 
